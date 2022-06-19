@@ -35,12 +35,6 @@ export default function NavBar() {
                         >
                             Inventarios
                         </NavLink>
-                        <NavLink 
-                            className="nav-item nav-link"
-                            to='/usuarios'
-                        >
-                            Usuarios
-                        </NavLink>
                     </ul>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TablaModulos({ componentes, openEditById }) {
+export default function Tabla({ componentes, openEditById }) {
   return (
     <div className="table-responsive">
       <table className="table">
@@ -11,7 +11,7 @@ export default function TablaModulos({ componentes, openEditById }) {
             <th scope="col">Estado</th>
             <th scope="col">Fecha Creación</th>
             <th scope="col">Fecha Actualización</th>
-            <th scope="col"></th>
+            <th scope="col">Usuario</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +26,7 @@ export default function TablaModulos({ componentes, openEditById }) {
                   <td>{est.estado ? 'Activo' : 'Inactivo'}</td>
                   <td>{creacion}</td>
                   <td>{est.fechaActualizacion}</td>
+                  <td>{est.usuario.nombre}</td>
                   <td>
                     <button
                       type="button"

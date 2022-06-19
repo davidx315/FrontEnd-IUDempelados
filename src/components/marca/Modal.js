@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Modal({estado, loading, closeModal, hidden, changeEstado, error, add}) {
+export default function Modal({marca, loading, closeModal, hidden, changeEstado, error, add}) {
   return (
 <div 
     className="modal fade" id="exampleModal" 
@@ -11,10 +11,10 @@ export default function Modal({estado, loading, closeModal, hidden, changeEstado
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLabel">{estado._id ? 'Editar Estado': 'Nuevo Estado'}</h5>
+          <h5 className="modal-title" id="exampleModalLabel">{marca._id ? 'Editar Estado': 'Nuevo Estado'}</h5>
           {
-            (loading && <div className="spinner-grow spinner-grow-sm" role="status">
-            <span className="visually-hidden">Loading...</span>
+            (loading && <div class="spinner-grow spinner-grow-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>)
           }
           
@@ -29,7 +29,7 @@ export default function Modal({estado, loading, closeModal, hidden, changeEstado
         </div>
         <div className="modal-body">
           <form onSubmit={add}>
-            <input type={hidden} name="_id" value={estado._id}></input>
+            <input type={hidden} name="_id" value={marca._id}></input>
             <div className="mb-3">
               <label 
                 htmlFor="recipient-name" 
@@ -38,10 +38,10 @@ export default function Modal({estado, loading, closeModal, hidden, changeEstado
                 Nombre:
               </label>
               <input 
-                disabled={estado._id ? true : false}
-                readOnly={estado._id ? true : false}
+                disabled={marca._id ? true : false}
+                readOnly={marca._id ? true : false}
                 required
-                value={estado.nombre}
+                value={marca.nombre}
                 name="nombre"
                 type="text" 
                 className="form-control"
@@ -51,13 +51,13 @@ export default function Modal({estado, loading, closeModal, hidden, changeEstado
             <div className="mb-3">
               <label htmlFor="message-text" className="col-form-label">Estado:</label>
               <select
-                disabled={estado._id ? false : true}
-                readOnly={estado._id ? false : true}
+                disabled={marca._id ? false : true}
+                readOnly={marca._id ? false : true}
                 required
                 className="form-select" 
                 aria-label="Default select example"
-                value={estado.estado}
-                name="estado"
+                value={marca.estado}
+                name="marca"
                 onChange={changeEstado}
               >
                 <option value={true}>Activo</option>

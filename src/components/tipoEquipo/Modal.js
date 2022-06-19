@@ -13,8 +13,8 @@ export default function Modal({estado, loading, closeModal, hidden, changeEstado
         <div className="modal-header">
           <h5 className="modal-title" id="exampleModalLabel">{estado._id ? 'Editar Estado': 'Nuevo Estado'}</h5>
           {
-            (loading && <div className="spinner-grow spinner-grow-sm" role="status">
-            <span className="visually-hidden">Loading...</span>
+            (loading && <div class="spinner-grow spinner-grow-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>)
           }
           

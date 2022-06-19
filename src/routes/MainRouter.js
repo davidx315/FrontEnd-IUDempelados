@@ -5,7 +5,6 @@ import NavBar from '../components/interfaceUsuario/NavBar'
 import Inventario from '../components/inventario/Inventario'
 import Marca from '../components/marca/Marca'
 import TipoEquipo from '../components/tipoEquipo/TipoEquipo'
-import Usuario from '../components/usuario/Usuario'
 
 export default function MainRouter() {
   return (
@@ -16,7 +15,6 @@ export default function MainRouter() {
             <Route  path='/marcas' element={<Marca />}/>
             <Route  path='/tipoequipos' element={<TipoEquipo />}/>
             <Route  path='/inventarios' element={<Inventario />}/>
-            <Route  path='/usuarios' element={<Usuario />}/>
         </Routes>
     </BrowserRouter>
   )

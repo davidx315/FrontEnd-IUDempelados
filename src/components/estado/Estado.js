@@ -19,7 +19,7 @@ export default function Estado() {
     const getEstados = () => {
         obtenerTodos()
         .then(r => {
-            console.log(r);
+            //console.log(r);
             setEstados(r.data)
         }).catch(e => {
             console.log(e)
